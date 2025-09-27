@@ -1,0 +1,4 @@
+creation_rules:
+  - kms: "arn:aws:kms:us-east-1:xxxxxxxx:key/xxxxxxxx"
+    encrypted_regex: '^(data|stringData)$'
+    path_regex: '.*\.(yaml|yml|json)$'
