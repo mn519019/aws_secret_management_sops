@@ -14,7 +14,7 @@
 
 - SOPS encryptes your secrets using your AWS KMS key. Therefore, you will need to create a kms key before using this module
 
-Note: Update your .sops.yaml file before you encrypt your file
+**Note: Update your .sops.yaml file before you encrypt your file**
 
 ```
 # Export a required variable
@@ -63,8 +63,8 @@ on darwin_arm64
 Your version of Terraform is out of date! The latest version
 is 1.13.3. You can update by downloading from https://developer.hashicorp.com/terraform/install
 📋 Stage 5: Running terraform plan...
-aws_secretsmanager_secret.pipeline_secret: Refreshing state... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz]
-aws_secretsmanager_secret_version.pipeline_secretversion: Refreshing state... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz|terraform-xxxxxx]
+aws_secretsmanager_secret.pipeline_secret: Refreshing state... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx]
+aws_secretsmanager_secret_version.pipeline_secretversion: Refreshing state... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx|terraform-xxxxxx]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
 -/+ destroy and then create replacement
@@ -73,9 +73,9 @@ Terraform will perform the following actions:
 
   # aws_secretsmanager_secret_version.pipeline_secretversion must be replaced
 -/+ resource "aws_secretsmanager_secret_version" "pipeline_secretversion" {
-      ~ arn                  = "arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz" -> (known after apply)
+      ~ arn                  = "arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx" -> (known after apply)
       + has_secret_string_wo = (known after apply)
-      ~ id                   = "arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz|terraform-xxxxxx" -> (known after apply)
+      ~ id                   = "arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx|terraform-xxxxxx" -> (known after apply)
       ~ secret_string        = (sensitive value) # forces replacement
       ~ version_id           = "terraform-xxxxxx" -> (known after apply)
       ~ version_stages       = [
@@ -92,8 +92,8 @@ Note: You didn't use the -out option to save this plan, so Terraform can't guara
 now.
 ✅ Plan succeeded.
 🚀 Stage 6: Applying terraform changes...
-aws_secretsmanager_secret.pipeline_secret: Refreshing state... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz]
-aws_secretsmanager_secret_version.pipeline_secretversion: Refreshing state... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz|terraform-xxxxxx]
+aws_secretsmanager_secret.pipeline_secret: Refreshing state... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx]
+aws_secretsmanager_secret_version.pipeline_secretversion: Refreshing state... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx|terraform-xxxxxx]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
 -/+ destroy and then create replacement
@@ -102,9 +102,9 @@ Terraform will perform the following actions:
 
   # aws_secretsmanager_secret_version.pipeline_secretversion must be replaced
 -/+ resource "aws_secretsmanager_secret_version" "pipeline_secretversion" {
-      ~ arn                  = "arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz" -> (known after apply)
+      ~ arn                  = "arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx" -> (known after apply)
       + has_secret_string_wo = (known after apply)
-      ~ id                   = "arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz|terraform-xxxxxx" -> (known after apply)
+      ~ id                   = "arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx|terraform-xxxxxx" -> (known after apply)
       ~ secret_string        = (sensitive value) # forces replacement
       ~ version_id           = "terraform-xxxxxx" -> (known after apply)
       ~ version_stages       = [
@@ -114,10 +114,10 @@ Terraform will perform the following actions:
     }
 
 Plan: 1 to add, 0 to change, 1 to destroy.
-aws_secretsmanager_secret_version.pipeline_secretversion: Destroying... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz|terraform-xxxxxx]
+aws_secretsmanager_secret_version.pipeline_secretversion: Destroying... [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx|terraform-xxxxxx]
 aws_secretsmanager_secret_version.pipeline_secretversion: Destruction complete after 0s
 aws_secretsmanager_secret_version.pipeline_secretversion: Creating...
-aws_secretsmanager_secret_version.pipeline_secretversion: Creation complete after 1s [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-Jx3rpz|terraform-xxxxxx]
+aws_secretsmanager_secret_version.pipeline_secretversion: Creation complete after 1s [id=arn:aws:secretsmanager:us-east-1:xxxxxx:secret:pipeline_secret-xxxxxx|terraform-xxxxxx]
 
 Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
 🧼 Stage 7: Cleanup will happen automatically via trap.
