@@ -12,9 +12,8 @@
 ## Getting Started
 # Encrypt your file
 
-- SOPS encryptes your secrets using your AWS KMS key. Therefore, you will need to create a kms key before using this module
-
 **Note: Update your .sops.yaml file before you encrypt your file**
+- SOPS encryptes your secrets using your AWS KMS key. Therefore, you will need to create a kms key before using this module
 
 ```
 # Export a required variable
